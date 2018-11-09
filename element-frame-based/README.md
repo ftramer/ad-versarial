@@ -14,7 +14,7 @@ Frame-based techniques operate on rendered portions of web content (iframes in t
 - [ResNet model that recognizes images of ads](#Resnet)
 
 
-##Data
+## Data
 
 Data used to train models or evaluate attacks can be found here: 
 https://github.com/ftramer/ad-versarial/releases.
@@ -25,25 +25,25 @@ Specifically:
 - [../data/web](../data/web) contains images and rendered iframes collected from 10 news websites
 
 
-##Evaluation and Attacks
+## Evaluation and Attacks
 Under `scripts` are bash scripts that generate adversarial examples for all 
 AdChoices logos in [../data/web/ad_logos](../data/web/ad_logos) for all element-based classifiers.
 
 Each subdirectory also contains specific information on how to run or attack specific classifiers.
 
 
-###Element-Based Techniques
+### Element-Based Techniques
 
 We evaluate and attack various element-based techniques to detect the AdChoices logo.
 
-####Exact Matching
+#### Exact Matching
 To test exact matching of AdChoices logos, run
 
 ```bash
 python exact_match.py ../data/ad_logos/ "../data/web/*/adchoice" temp
 ```
 
-####Average Hashing
+#### Average Hashing
 Average hashing is a simple template matching technique, that computes binary image hashes 
 by comparing each input pixel to the mean pixel value.
 
@@ -63,7 +63,7 @@ To create a false positive that macthes with `../data/ad_logos/aol.png`:
 python -m phash.attack_false_positive ../data/ad_logos/aol.png temp
 ```
 
-####SIFT
+#### SIFT
 SIFT is a powerful template-matching algorithm that compares images based on certain 
 keypoints extracted by the algorithm.
 
@@ -90,7 +90,7 @@ with [../data/ad_logos/aol.png](../data/ad_logos/aol.png):
 python -m sift.black_box_false_positive ../data/ad_logos/aol.png temp
 ```
 
-####OCR
+#### OCR
 We use [Tesseract](`https://github.com/tesseract-ocr/tesseract`)'s OCR model to 
 transcribe textual AdChoices logos.
 
@@ -135,9 +135,9 @@ python -m OCR.evade_or_fp_attack --image=../data/ad_logos/aol.png \
     --chars_target_file=OCR/targets/fp_30.txt
 ```
 
-###Frame-Based Techniques
+### Frame-Based Techniques
 
-####YOLO-v3
+#### YOLO-v3
 
 The code in [logo_detection](logo_detection) trains a YOLO-v3 model 
 to locate the AdChoices logo in rendered iframes.
@@ -145,7 +145,7 @@ to locate the AdChoices logo in rendered iframes.
 Some code was adapted from [yolov3-tensorflow](https://github.com/yuto3o/yolov3-tensorflow).
 We used [DarkNet](https://github.com/AlexeyAB/darknet) for training.
 
-#####Training
+##### Training
 
 Training data is generated with:
 ```bash
@@ -190,7 +190,7 @@ We train the model with:
 Finally, we run [logo_detection/convert_tf.py](logo_detection/convert_tf.py) to convert 
 the darknet weights to Keras.
 
-#####Evaluation and Attacks
+##### Evaluation and Attacks
 
 A pre-trained model is available here: https://github.com/ftramer/ad-versarial/releases.
 The below code assumes the model checkpoint is stored under 
@@ -199,7 +199,7 @@ The below code assumes the model checkpoint is stored under
 We run [logo_detection/eval_accuracy.py](logo_detection/eval_accuracy.py) to evaluate 
 accuracy and generate adversarial examples.
 
-####Resnet
+#### Resnet
 
 We evaluate a ResNet model trained by Hussein et al. to recognize images of ads in
 [Automatic Understanding of Image and Video Advertisements](`http://openaccess.thecvf.com/content_cvpr_2017/papers/Hussain_Automatic_Understanding_of_CVPR_2017_paper.pdf`).

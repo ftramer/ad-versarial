@@ -1,4 +1,4 @@
-#Ad-versarial: Defeating Perceptual Ad-Blocking
+# Ad-versarial: Defeating Perceptual Ad-Blocking
 
 This repository contains code to create, evaluate, and attack various types of 
 *Perceptual Ad-Blockers*.
@@ -7,9 +7,9 @@ Our results are described in the following paper:
 
 *Ad-versarial: Defeating Perceptual Ad-Blocking* </br>
 **Florian Tramèr, Pascal Dupré, Gili Rusak, Giancarlo Pellegrino, and Dan Boneh** </br>
-[arxiv:1811:XXXX](http://arxiv.org/abs/1811.XXXXX)
+[arxiv:1811:03194](http://arxiv.org/abs/1811.03194)
 
-##Background
+## Background
 Perceptual ad-blocking was recently proposed as a novel, more robust, way of automatically 
 detecting online ads, by relying on *visual cues* to detect ads, in the same way as a 
 human user would 
@@ -22,7 +22,9 @@ We trained a similar model on screenshots from hundreds of different news websit
 As shown below, it does a pretty good job of locating ads (here on an article from 
 [The Guardian](https://www.theguardian.com)):
 
-![adblocker on the guardian](images/theguardian.png)
+<p align="center">
+<img src="images/theguardian.png" width="500">
+</p>
 
 The goal of our work is to show that while sound in principle, perceptual ad-blocking can 
 be easily defeated when instantiated with current computer vision techniques. 
@@ -38,18 +40,19 @@ an adversarial example for SIFT (middle) which can be used to evade ad-blocking 
 disclosing ads to users, and a mostly invisible false positive for SIFT (right) which could be 
 used as a "honeypot" to detect ad-blocking.
 
-AdChoices logo                      | Adversarial example for SIFT               | False positive for SIFT                  |
-:----------------------------------:|:------------------------------------------:|:----------------------------------------:|
-![Adchoices](images/adchoices.png)  | ![Adchoices Adv](images/adchoices_adv.png) | ![Adchoices FP](images/adchoices_fp.png) |
-
+AdChoices logo                      | Adversarial example for SIFT                    | False positive for SIFT                  |
+:----------------------------------:|:-----------------------------------------------:|:----------------------------------------:|
+![Adchoices](images/adchoices.png)  | ![Adchoices Adv](images/adchoices_adv_sift.png) | ![Adchoices FP](images/adchoices_fp.png) |
 
 For perceptual ad-blockers like [Sentinel](https://adblock.ai/) that operate on full webpage 
 screenshots, crazier attacks are possible. In the below mock Facebook screenshot, Jerry 
 uploaded a perturbed image that causes the ad-blocker to block Tom's content instead:
 
-![adblocker blocks Tom](images/tom_jerry.png)
+<p align="center">
+  <img src="images/tom_jerry.png" width="500">
+</p>
 
-##Installation
+## Installation
 
 Our attacks and evaluations use `python 3`.
 The main requirements are `OpenCV` (version 3.4.1), `TensorFlow` and `Keras`.
@@ -58,7 +61,7 @@ All requirements can be installed by running
 pip install -r requirements.txt
 ```
 
-##Training, Evaluating and Attacking Perceptual Ad-Blockers
+## Training, Evaluating and Attacking Perceptual Ad-Blockers
 
 Pre-trained models as well as data used for training and evaluating attacks can be found 
 here: https://github.com/ftramer/ad-versarial/releases
