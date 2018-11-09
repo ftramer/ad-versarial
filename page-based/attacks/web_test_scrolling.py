@@ -1,5 +1,4 @@
 
-import matplotlib.pyplot as plt
 from yolo_v3 import non_max_suppression
 from utils import *
 
@@ -59,6 +58,7 @@ def main(argv=None):
 
     full_page = Image.open(FLAGS.full_page)
     w, h = full_page.size
+
     ratio = w / (1.0 * input_w)
     new_h = int(h * ratio)
     full_page = np.array(full_page.resize((input_w, new_h))).astype(np.float32)
@@ -99,11 +99,11 @@ def main(argv=None):
 
         img = Image.fromarray(img.astype(np.uint8))
         draw_boxes(filtered_boxes, img, classes, (FLAGS.size, FLAGS.size))
-        img.save("output/scroll/img_boxes_{}.png".format(i))
+        img.save("output/scroll/img_boxes_{0:03d}.png".format(i))
 
         img_adv = Image.fromarray(img_adv.astype(np.uint8))
         draw_boxes(filtered_boxes_adv, img_adv, classes, (FLAGS.size, FLAGS.size))
-        img_adv.save("output/scroll/img_adv_boxes{}.png".format(i))
+        img_adv.save("output/scroll/img_adv_boxes_{0:03d}.png".format(i))
 
 
 if __name__ == '__main__':
