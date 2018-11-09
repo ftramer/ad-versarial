@@ -26,6 +26,8 @@ As shown below, it does a pretty good job of locating ads (here on an article fr
 <img src="images/theguardian.png" width="500">
 </p>
 
+A video demonstrating our model in action while browsing real websites is [here](videos/yolov3_perceptual_adblocker_detection.mp4).
+
 The goal of our work is to show that while sound in principle, perceptual ad-blocking can 
 be easily defeated when instantiated with current computer vision techniques. 
 Specifically, we create **adversarial examples** for ad-detection classifiers that allow 
@@ -76,8 +78,7 @@ first segment a webpage into smaller fragments to be classified. See the
 
 The subdirectory [page-based](page-based) contains our implementation of a "page-based" 
 perceptual ad-blocker similar to [Sentinel](https://adblock.ai/), which we trained to 
-locate ads on arbitrary websites. A video demonstrating it in action can be found in our 
-[release](https://github.com/ftramer/ad-versarial/releases).
+locate ads on arbitrary websites. A video demonstrating it in action can be found [here](videos/yolov3_perceptual_adblocker_detection.mp4).
 See the [README](page-based/README.md) for detailed information on training, evaluating and 
 attacking this model.
 
