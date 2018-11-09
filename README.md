@@ -26,7 +26,7 @@ As shown below, it does a pretty good job of locating ads (here on an article fr
 <img src="images/theguardian.png" width="500">
 </p>
 
-**A video demonstrating our model in action while browsing real websites is [here](https://www.dropbox.com/sh/pe7tjf6mwcyhcd8/AACl2wPVZ8xttG34_aPupEd7a?dl=0)**.
+**A video demonstrating our model in action while browsing real websites is [here](https://www.dropbox.com/sh/pe7tjf6mwcyhcd8/AACl2wPVZ8xttG34_aPupEd7a?dl=0), or check out the [GIF](#attackgif) below.**
 
 The goal of our work is to show that while sound in principle, perceptual ad-blocking can 
 be easily defeated when instantiated with current computer vision techniques. 
@@ -57,7 +57,7 @@ uploaded a perturbed image that causes the ad-blocker to block Tom's content ins
 
 We also show how to evade and detect such ad-blockers. The GIF below shows the ad-blocker locating ads in a New York Times article (left), and an attack (right) where the web publisher adds an adversarial transparent overlay over the page to evade ad-blocking.
 
-<p align="center">
+<p align="center" id="attackgif">
   <img src="images/overlay_attack.gif">
 </p>
 
