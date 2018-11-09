@@ -26,6 +26,8 @@ As shown below, it does a pretty good job of locating ads (here on an article fr
 <img src="images/theguardian.png" width="500">
 </p>
 
+A video demonstrating our model in action while browsing real websites is [here](videos/yolov3_perceptual_adblocker_detection.mp4).
+
 The goal of our work is to show that while sound in principle, perceptual ad-blocking can 
 be easily defeated when instantiated with current computer vision techniques. 
 Specifically, we create **adversarial examples** for ad-detection classifiers that allow 
