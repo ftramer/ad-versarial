@@ -11,7 +11,7 @@ Our results are described in the following paper:
 
 ## Background
 Perceptual ad-blocking was recently proposed as a novel, more robust, way of automatically 
-detecting online ads, by relying on *visual cues* to detect ads, in the same way as a 
+detecting online ads, by relying on *visual cues* associated with ads, in the same way a 
 human user would 
 (see [The Future of Ad Blocking: An Analytical Framework and New Techniques](https://arxiv.org/abs/1705.08568)).
 
