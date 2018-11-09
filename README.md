@@ -26,11 +26,12 @@ As shown below, it does a pretty good job of locating ads (here on an article fr
 <img src="images/theguardian.png" width="500">
 </p>
 
-A video demonstrating our model in action while browsing real websites is [here](videos/yolov3_perceptual_adblocker_detection.mp4).
+**A video demonstrating our model in action while browsing real websites is [here](https://www.dropbox.com/sh/pe7tjf6mwcyhcd8/AACl2wPVZ8xttG34_aPupEd7a?dl=0)**.
 
 The goal of our work is to show that while sound in principle, perceptual ad-blocking can 
 be easily defeated when instantiated with current computer vision techniques. 
-Specifically, we create **adversarial examples** for ad-detection classifiers that allow 
+Specifically, we create **[adversarial examples](https://blog.openai.com/adversarial-example-research/)** 
+for ad-detection classifiers that allow 
 web publishers or ad networks to evade and detect perceptual ad-blocking. 
 We construct adversarial examples both for traditional computer vision algorithms 
 (e.g., perceptual hashing, SIFT or OCR) aimed at detecting ad-disclosure cues such as the
@@ -78,7 +79,7 @@ first segment a webpage into smaller fragments to be classified. See the
 
 The subdirectory [page-based](page-based) contains our implementation of a "page-based" 
 perceptual ad-blocker similar to [Sentinel](https://adblock.ai/), which we trained to 
-locate ads on arbitrary websites. A video demonstrating it in action can be found [here](videos/yolov3_perceptual_adblocker_detection.mp4).
+locate ads on arbitrary websites. A video demonstrating it in action can be found [here](https://www.dropbox.com/sh/pe7tjf6mwcyhcd8/AACl2wPVZ8xttG34_aPupEd7a?dl=0).
 See the [README](page-based/README.md) for detailed information on training, evaluating and 
 attacking this model.
 
