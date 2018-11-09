@@ -114,3 +114,4 @@ models/page_based_yolov3*
 
 .DS_Store
 .idea
+*.tar.gz
