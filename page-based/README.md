@@ -1,12 +1,12 @@
-#Code for training, evaluating and attacking a page-based perceptual ad-blocker.
+# Code for training, evaluating and attacking a page-based perceptual ad-blocker.
 
 The code in this directory used to load and run the YOLO-v3 model is inspired 
 by [tensorflow-yolo-v3](https://github.com/mystic123/tensorflow-yolo-v3).
 
-###Data Collection and Training
-TODO
+### Data Collection and Training
+Coming soon...
 
-###Evaluation
+### Evaluation
 
 A pre-trained classifier is available from https://github.com/ftramer/ad-versarial/releases
 The below script expects `page_based_yolov3.weights` to be placed under [../models](../models).
@@ -19,12 +19,12 @@ To evaluate the model on 20 screenshots of news websites
 python classify.py --input_dir=../data/page_based/web/test/ --output_dir=temp
 ```
 
-###Attacks
+### Attacks
 
 Below is a list of commands for reproducing different attacks considered in our paper.
 The attack samples will be saved in subdirectories under a global `output` directory.
 
-####Universal attacks for all webpages:
+#### Universal attacks for all webpages:
 
 - *Evasion Attack (C4U in the paper)*: The publisher overlays a transparent mask on the full webpage to evade ad-blocking:
 ```bash
@@ -48,7 +48,7 @@ of a page that triggers a false ad prediction:
 python -m attacks.web_footer_false_positive --input_dir=../data/page_based/web/
 ```
 
-####Attacks fine-tuned for bbc.com:
+#### Attacks fine-tuned for bbc.com:
 
 - *Evasion Attack (C4 in the paper)*: The publisher perturbs bottom of ad frame to evade 
 ad-blocking: 
@@ -68,7 +68,7 @@ false ad prediction:
 python -m attacks.bbc_false_positive --input_dir=../data/page_based/bbc/
 ```
 
-####Demo of abuse attack on Facebook
+#### Demo of abuse attack on Facebook
 Include [keras-yolo3](keras-yolo3):
 
 ```bash
