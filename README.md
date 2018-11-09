@@ -7,7 +7,7 @@ Our results are described in the following paper:
 
 *Ad-versarial: Defeating Perceptual Ad-Blocking* </br>
 **Florian Tramèr, Pascal Dupré, Gili Rusak, Giancarlo Pellegrino, and Dan Boneh** </br>
-[arxiv:1811:XXXX](http://arxiv.org/abs/1811.XXXXX)
+[arxiv:1811:03194](http://arxiv.org/abs/1811.03194)
 
 ## Background
 Perceptual ad-blocking was recently proposed as a novel, more robust, way of automatically 
