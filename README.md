@@ -78,8 +78,7 @@ first segment a webpage into smaller fragments to be classified. See the
 
 The subdirectory [page-based](page-based) contains our implementation of a "page-based" 
 perceptual ad-blocker similar to [Sentinel](https://adblock.ai/), which we trained to 
-locate ads on arbitrary websites. A video demonstrating it in action can be found in our 
-[release](https://github.com/ftramer/ad-versarial/releases).
+locate ads on arbitrary websites. A video demonstrating it in action can be found [here](videos/yolov3_perceptual_adblocker_detection.mp4).
 See the [README](page-based/README.md) for detailed information on training, evaluating and 
 attacking this model.
 
