@@ -55,6 +55,13 @@ uploaded a perturbed image that causes the ad-blocker to block Tom's content ins
   <img src="images/tom_jerry.png" width="500">
 </p>
 
+We also show how to evade and detect such ad-blockers. The GIF below shows the ad-blocker locating ads in a New York Times article (left), and an attack (right) where the web publisher adds an adversarial transparent overlay over the page to evade ad-blocking.
+
+<p align="center">
+  <img src="images/overlay_attack.gif">
+</p>
+
+
 ## Installation
 
 Our attacks and evaluations use `python 3`.
