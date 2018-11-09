@@ -38,7 +38,7 @@ We construct adversarial examples both for traditional computer vision algorithm
 [AdChoices logo](https://en.wikipedia.org/wiki/AdChoices), as well as for deep neural 
 networks such as Sentinel that find ads in rendered web content.
 
-As an example, the below two images are respectively a standard AdChoices logo (left), 
+As an example, the below images are respectively a standard AdChoices logo (left), 
 an adversarial example for SIFT (middle) which can be used to evade ad-blocking while still 
 disclosing ads to users, and a mostly invisible false positive for SIFT (right) which could be 
 used as a "honeypot" to detect ad-blocking.
