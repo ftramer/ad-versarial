@@ -102,3 +102,15 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+data/ad_logos/
+data/page_based
+data/web
+data/*.png
+external/keras_resnet.h5
+external/hussain_ads
+models/frame_based_yolov3
+models/page_based_yolov3*
+
+.DS_Store
+.idea

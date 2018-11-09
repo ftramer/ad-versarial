@@ -1,0 +1,4 @@
+[submodule "page-based/keras-yolo3"]
+	path = page-based/keras-yolo3
+	url = https://github.com/ftramer/keras-yolo3.git
+	branch = master

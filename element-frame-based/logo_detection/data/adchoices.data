@@ -1,0 +1,5 @@
+classes = 1
+train = logo_detection/data/train.txt
+valid = logo_detection/data/test.txt
+names = logo_detection/data/adchoices.names
+backup = logo_detection/backup/

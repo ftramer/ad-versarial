@@ -1,0 +1,1 @@
+This folder should contain the data found in our [release](https://github.com/ftramer/ad-versarial/releases).
