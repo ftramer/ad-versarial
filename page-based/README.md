@@ -4,7 +4,51 @@ The code in this directory used to load and run the YOLO-v3 model is inspired
 by [tensorflow-yolo-v3](https://github.com/mystic123/tensorflow-yolo-v3).
 
 ### Data Collection and Training
-Coming soon...
+
+The scripts for data collection can be found under [data-collection].
+
+You need to install 
+
+```bash
+apt-get install python-selenium chromium-chromedriver mongodb
+```
+
+First, you want to collect website screenshots with replaced ads. Download the latest [easylist](https://easylist.to/easylist/easylist.txt), and optionally obtain the database of ghostery (Install ghostery in any browser). Then create a file with one URL per line and use:
+
+```bash
+python3 crawler.py <urls file> <database> --replace-others --easylist easylist.txt --ghostery <path to ghostery>/databases/bugs.json
+```
+
+The screenshots will be placed under `data`. Sort through the screenshots/templates and check that all ads were replaced and the monochrome boxes were detected correctly. Write all pathes to the template's directories (containing `main.png` and `main-boxes.json`) in a file. Create a directory and place all advertisements that you want to use in it.
+
+```bash
+python3 generator.py <templates file> <ads directory>
+```
+
+`-n x` will create `x` different images from one screenshot with different ads. `--recreate` will index the ads again which is required when new ads are added after running the script for the first time (this takes some time). There are some constants at the beginning of the script that you might want to tweak.
+
+Images will be placed under `images` and label files under `labels`. Split this data with a method of your choice and create a list of images for training and a list of images for validation. The label file for image `image.png` has to be placed at `../labels/image.txt`.
+
+Download and compile [YOLO](https://pjreddie.com/darknet/yolo/) with GPU support. The configuration files we used can be found under [data-collection/yolo-config]. You have to enter the paths to your training/validation list in [voc.data](data-collection/yolo-config/voc.data). Download the pretrained weights
+
+```bash
+wget https://pjreddie.com/media/files/darknet53.conv.74
+```
+
+Start the training with
+
+```bash
+./darknet detector train voc.data yolov3-voc.cfg darknet53.conv.74
+```
+
+If you run into memory problems you can reduce `batch` and `subdivisions` in `yolov3-voc.cfg`. We had the best results after 3600 iterations but you should train for more iterations and later evaluate all of them and pick the best.
+
+To evaluate our weights, we used [https://github.com/AlexeyAB/darknet] with the command:
+
+```bash
+./darknet detector map voc.data yolov3-voc.cfg <weights file>
+```
+
 
 ### Evaluation
 
