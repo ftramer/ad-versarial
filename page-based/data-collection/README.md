@@ -24,7 +24,7 @@ python3 crawler.py <urls file> <database> --replace-others --easylist easylist.t
 
 Do not use a database that is used for other purposes. The `--clear-database` option will delete all data from the database before using it.
 
-The screenshots will be placed under `data`. Sort through the screenshots/templates and check that all ads were replaced and the monochrome boxes were detected correctly. Write all pathes to the template's directories (containing `main.png` and `main-boxes.json`) in a file. Our templates can be downloaded [here (coming soon)]().
+The screenshots will be placed under `data`. Sort through the screenshots/templates and check that all ads were replaced and the monochrome boxes were detected correctly. Write all pathes to the template's directories (containing `main.png` and `main-boxes.json`) in a file.
 
 Create a directory and place all advertisements that you want to use in it. A larger collection of ads can be found under [/external/hussain_ads](/external/README.md).
 
@@ -35,8 +35,6 @@ python3 generator.py <templates file> <ads directory>
 `-n x` will create `x` different images from one screenshot with different ads. `--recreate` will index the ads again which is required when new ads are added after running the script for the first time (this takes some time). There are some constants at the beginning of the script that you might want to tweak.
 
 Images will be placed under `images` and label files under `labels`. Split this data with a method of your choice and create a list of images for training and a list of images for validation. The label file for image `image.png` has to be placed at `../labels/image.txt`.
-
-Our training and validation dataset can be be downloaded [here (coming soon)](). A smaller validation set can be found [here (coming soon)]().
 
 
 ### Training
