@@ -12,7 +12,7 @@ Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Sec
 
 ## Background
 Perceptual ad-blocking was recently proposed as a novel, more robust, way of automatically 
-detecting online ads, by relying on *visual cues* to detect ads, in the same way as a 
+detecting online ads, by relying on *visual cues* associated with ads, in the same way a 
 human user would 
 (see [The Future of Ad Blocking: An Analytical Framework and New Techniques](https://arxiv.org/abs/1705.08568)).
 
@@ -26,7 +26,7 @@ As shown below, it does a pretty good job of locating ads (here on an article fr
 <img src="images/theguardian.png" width="500">
 </p>
 
-**A video demonstrating our model in action while browsing real websites is [here](https://github.com/ftramer/ad-versarial/blob/master/videos/yolov3_perceptual_adblocker_detection.mp4)**.
+**A video demonstrating our model in action while browsing real websites is [here](https://github.com/ftramer/ad-versarial/blob/master/videos/yolov3_perceptual_adblocker_detection.mp4), or check out the [GIF](#attackgif) below.**
 
 Perceptual ad-blocking has also attracted the attation of the Brave browser team. [Percival](https://arxiv.org/abs/1905.07444) 
 is a patch for the Chromium and Brave browsers that incorporates a neural network directly into the
@@ -42,7 +42,7 @@ We construct adversarial examples both for traditional computer vision algorithm
 [AdChoices logo](https://en.wikipedia.org/wiki/AdChoices), as well as for deep neural 
 networks such as Sentinel and Percival that find ads in rendered web content.
 
-As an example, the below two images are respectively a standard AdChoices logo (left), 
+As an example, the below images are respectively a standard AdChoices logo (left), 
 an adversarial example for SIFT (middle) which can be used to evade ad-blocking while still 
 disclosing ads to users, and a mostly invisible false positive for SIFT (right) which could be 
 used as a "honeypot" to detect ad-blocking.
@@ -57,6 +57,12 @@ uploaded a perturbed image that causes the ad-blocker to block Tom's content ins
 
 <p align="center">
   <img src="images/tom_jerry.png" width="500">
+</p>
+
+We also show how to evade and detect such ad-blockers. The GIF below shows the ad-blocker locating ads in a New York Times article (left), and an attack (right) where the web publisher adds an adversarial transparent overlay over the page to evade ad-blocking.
+
+<p align="center" id="attackgif">
+  <img src="images/overlay_attack.gif">
 </p>
 
 For [Percival](https://arxiv.org/abs/1905.07444), we created a [proof-of-concept web page](element-frame-based/percival/attack.html)

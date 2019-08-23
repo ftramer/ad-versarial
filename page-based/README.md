@@ -4,7 +4,9 @@ The code in this directory used to load and run the YOLO-v3 model is inspired
 by [tensorflow-yolo-v3](https://github.com/mystic123/tensorflow-yolo-v3).
 
 ### Data Collection and Training
-Coming soon...
+
+Our scripts for data collection can be found in [data-collection](data-collection).
+
 
 ### Evaluation
 

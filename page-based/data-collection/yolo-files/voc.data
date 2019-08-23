@@ -1,0 +1,6 @@
+classes= 1
+train  = <path to training file>
+valid  = <path to validation file>
+names  = voc.names
+backup = backup
+
