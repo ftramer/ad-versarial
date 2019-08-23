@@ -219,6 +219,6 @@ We evaluate the neural network used by Percival in a [Jupyter notebook](percival
 
 We built a [proof-of-concept web page](percival/attack.html) to demonstrate that this attack works when deployed in Percival's instrumented Chromium browser:
 
-<p>
+<p align="center">
   <img src="percival/attack.png" width="500">
 </p>
