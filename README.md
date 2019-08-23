@@ -66,7 +66,11 @@ We also show how to evade and detect such ad-blockers. The GIF below shows the a
 </p>
 
 For [Percival](https://arxiv.org/abs/1905.07444), we created a [proof-of-concept web page](element-frame-based/percival/attack.html)
-that evades ad-detection when displayed in the instrumented Chromium browser.
+that evades ad-detection when displayed in the instrumented Chromium browser:
+
+<p>
+  <img src="percival/attack.png" width="500">
+</p>
 
 ## Installation
 

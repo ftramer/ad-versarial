@@ -12,7 +12,7 @@ Frame-based techniques operate on rendered portions of web content (iframes in t
 **Frame-based algorithms**:
 - [YOLO-v3 model that detects the AdChoices logo](#YOLO-v3)
 - [ResNet model that recognizes images of ads](#Resnet)
-- [MobileNet model used in Percival] (#Percival)
+- [MobileNet model used in Percival](#Percival)
 
 ## Data
 
@@ -217,4 +217,8 @@ python -m resnet.test
 [Percival](`https://arxiv.org/abs/1905.07444`) is a recently proposed patch for the Chromium and Brave browsers that adds an ad-detection neural network directly into the browser's rendering pipeline.
 We evaluate the neural network used by Percival in a [Jupyter notebook](percival/attack.ipynb).
 
-We built a proof-of-concept web page to demonstrate that this attack works when deployed in Percival's instrumented Chromium browser: [percival/attack.html](percival/attack.html)
+We built a [proof-of-concept web page](percival/attack.html) to demonstrate that this attack works when deployed in Percival's instrumented Chromium browser:
+
+<p>
+  <img src="percival/attack.png" width="500">
+</p>
