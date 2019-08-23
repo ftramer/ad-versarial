@@ -26,7 +26,7 @@ As shown below, it does a pretty good job of locating ads (here on an article fr
 <img src="images/theguardian.png" width="500">
 </p>
 
-**A video demonstrating our model in action while browsing real websites is [here](https://github.com/ftramer/ad-versarial/blob/master/videos/yolov3_perceptual_adblocker_detection.mp4), or check out the [GIF](#attackgif) below.**
+**A video demonstrating our model in action while browsing real websites is [here](https://www.dropbox.com/sh/pe7tjf6mwcyhcd8/AACl2wPVZ8xttG34_aPupEd7a?dl=0), or check out the [GIF](#attackgif) below.**
 
 Perceptual ad-blocking has also attracted the attation of the Brave browser team. [Percival](https://arxiv.org/abs/1905.07444) 
 is a patch for the Chromium and Brave browsers that incorporates a neural network directly into the
