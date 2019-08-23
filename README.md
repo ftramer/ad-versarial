@@ -49,7 +49,7 @@ used as a "honeypot" to detect ad-blocking.
 
 AdChoices logo                      | Adversarial example for SIFT                    | False positive for SIFT                  |
 :----------------------------------:|:-----------------------------------------------:|:----------------------------------------:|
-![Adchoices](images/adchoices.png)  | ![Adchoices Adv](images/adchoices_adv_sift.png) | ![Adchoices FP](images/adchoices_fp.png) |
+![Adchoices](images/ac.png)  | ![Adchoices Adv](images/ac_adv_sift.png) | ![Adchoices FP](images/ac_fp.png) |
 
 For perceptual ad-blockers like [Sentinel](https://adblock.ai/) that operate on full webpage 
 screenshots, crazier attacks are possible. In the below mock Facebook screenshot, Jerry 

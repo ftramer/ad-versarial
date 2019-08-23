@@ -215,7 +215,7 @@ python -m resnet.test
 #### Percival
 
 [Percival](`https://arxiv.org/abs/1905.07444`) is a recently proposed patch for the Chromium and Brave browsers that adds an ad-detection neural network directly into the browser's rendering pipeline.
-We evaluate the neural network used by Percival in a [Jupyter notebook](percival/attack.ipynb).
+We evaluate the neural network used by Percival in a [Jupyter notebook](percival/attack.ipynb). To build Percival, follow the [official instructions](https://github.com/dxaen/percival).
 
 We built a [proof-of-concept web page](percival/attack.html) to demonstrate that this attack works when deployed in Percival's instrumented Chromium browser:
 
