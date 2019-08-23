@@ -1,12 +1,13 @@
-# Ad-versarial: Defeating Perceptual Ad-Blocking
+# AdVersarial: Defeating Perceptual Ad Blocking
 
 This repository contains code to create, evaluate, and attack various types of 
 *Perceptual Ad-Blockers*.
 
 Our results are described in the following paper:
 
-*Ad-versarial: Defeating Perceptual Ad-Blocking* </br>
+*AdVersarial: Defeating Perceptual Ad Blocking* </br>
 **Florian Tramèr, Pascal Dupré, Gili Rusak, Giancarlo Pellegrino, and Dan Boneh** </br>
+Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Security (CCS '19)
 [arxiv:1811:03194](http://arxiv.org/abs/1811.03194)
 
 ## Background
@@ -17,8 +18,7 @@ human user would
 
 This idea has recently attracted the attention of [Adblock Plus](https://adblockplus.org/), 
 who unveiled [Sentinel](https://adblock.ai/), a prototype neural network that detects ads 
-in Facebook screenshots.
-We trained a similar model on screenshots from hundreds of different news websites. 
+in Facebook screenshots. We trained a similar model on screenshots from hundreds of different news websites. 
 As shown below, it does a pretty good job of locating ads (here on an article from 
 [The Guardian](https://www.theguardian.com)):
 
@@ -26,7 +26,11 @@ As shown below, it does a pretty good job of locating ads (here on an article fr
 <img src="images/theguardian.png" width="500">
 </p>
 
-**A video demonstrating our model in action while browsing real websites is [here](https://www.dropbox.com/sh/pe7tjf6mwcyhcd8/AACl2wPVZ8xttG34_aPupEd7a?dl=0)**.
+**A video demonstrating our model in action while browsing real websites is [here](https://github.com/ftramer/ad-versarial/blob/master/videos/yolov3_perceptual_adblocker_detection.mp4)**.
+
+Perceptual ad-blocking has also attracted the attation of the Brave browser team. [Percival](https://arxiv.org/abs/1905.07444) 
+is a patch for the Chromium and Brave browsers that incorporates a neural network directly into the
+browser's rendering pipeline to detect ads.
 
 The goal of our work is to show that while sound in principle, perceptual ad-blocking can 
 be easily defeated when instantiated with current computer vision techniques. 
@@ -36,7 +40,7 @@ web publishers or ad networks to evade and detect perceptual ad-blocking.
 We construct adversarial examples both for traditional computer vision algorithms 
 (e.g., perceptual hashing, SIFT or OCR) aimed at detecting ad-disclosure cues such as the
 [AdChoices logo](https://en.wikipedia.org/wiki/AdChoices), as well as for deep neural 
-networks such as Sentinel that find ads in rendered web content.
+networks such as Sentinel and Percival that find ads in rendered web content.
 
 As an example, the below two images are respectively a standard AdChoices logo (left), 
 an adversarial example for SIFT (middle) which can be used to evade ad-blocking while still 
@@ -54,6 +58,9 @@ uploaded a perturbed image that causes the ad-blocker to block Tom's content ins
 <p align="center">
   <img src="images/tom_jerry.png" width="500">
 </p>
+
+For [Percival](https://arxiv.org/abs/1905.07444), we created a [proof-of-concept web page](element-frame-based/percival/attack.html)
+that evades ad-detection when displayed in the instrumented Chromium browser.
 
 ## Installation
 
