@@ -69,7 +69,7 @@ For [Percival](https://arxiv.org/abs/1905.07444), we created a [proof-of-concept
 that evades ad-detection when displayed in the instrumented Chromium browser:
 
 <p>
-  <img src="percival/attack.png" width="500">
+  <img src="element-frame-based/percival/attack.png" width="500">
 </p>
 
 ## Installation
