@@ -11,7 +11,7 @@ click==6.2
 cloudpickle==0.6.1
 coloredlogs==10.0
 construct==2.5.3
-cryptography==2.3.1
+cryptography==3.2
 cssutils==1.0.2
 cycler==0.10.0
 dask==0.20.1
