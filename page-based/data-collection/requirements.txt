@@ -28,7 +28,7 @@ jsbeautifier==1.6.14
 kaitaistruct==0.8
 kiwisolver==1.0.1
 ldap3==2.5.1
-mitmproxy==4.0.4
+mitmproxy==8.0.0
 networkx==2.2
 numpy==1.15.4
 packaging==18.0
