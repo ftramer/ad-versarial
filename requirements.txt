@@ -25,6 +25,6 @@ scipy==1.1.0
 six==1.11.0
 sklearn==0.0
 tensorboard==1.8.0
-tensorflow-gpu==1.15.2
+tensorflow-gpu==2.9.3
 termcolor==1.1.0
 Werkzeug==0.15.3
